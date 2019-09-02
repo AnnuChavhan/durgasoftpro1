@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery Page</title>
+</head>
+<body>
+{% block content %}
+
+    <div class="container bg-success">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static  'images/img8.jpg' %}" style="width: 100%;border-radius: 50%">
+            </div>
+            <div class="col-md-6">
+                <img class="" src="{% static  'images/img9.jpg' %}"style="width: 100%;border-radius: 50%">
+            </div>
+        </div>
+        <br> <br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static  'images/img22.jpg' %}" style="width: 100%;border-radius: 50%">
+            </div>
+            <div class="col-md-6">
+                <img src="{% static  'images/img21.jpg' %}"style="width: 100%;border-radius: 50%">
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static  'images/img13.jpeg' %}" style="width: 100% ; height: 10cm;border-radius: 50%">
+            </div>
+            <div class="col-md-6">
+                <img src="{% static  'images/img14.jpg' %}"style="width: 100%;border-radius: 50%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static  'images/img19.jpg' %}" style="width: 100%;border-radius: 50%">
+            </div>
+            <div class="col-md-6">
+                <img src="{% static  'images/img17.jfif' %}"style="width: 100%;border-radius: 50%">
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static  'images/img9.jpg' %}" style="width: 100%;border-radius: 50%">
+            </div>
+            <div class="col-md-6">
+                <img src="{% static  'images/img14.jpg' %}"style="width: 100%;border-radius: 50%">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

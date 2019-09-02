@@ -1,0 +1,76 @@
+{% load  staticfiles %}
+ <!doctype html>
+<html lang="en">
+
+<html>
+<head>
+    <title>Durga Soft</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--    <link href="{% static 'css/base.css' %}" rel="stylesheet">-->
+    </head>
+<body>
+<!--
+<nav>
+    <ul class="menu">
+        <li class="menu_item"><a href="/home/">Home</a></li>
+        <li class="menu_item"><a href="/services/">Services</a></li>
+        <li class="menu_item"><a href="/enquiry/">Enquiry</a></li>
+        <li class="menu_item"><a href="/gallery/">Gallery</a></li>
+        <li class="menu_item"><a href="/feedback/">Feedback</a></li>
+    </ul>
+</nav>
+-->
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link text-white" href="/home/">Home</a>
+            <a class="nav-item nav-link text-white" href="/services/">Services</a>
+            <a class="nav-item nav-link text-white" href="/enquiry/">Enquiry</a>
+            <a class="nav-item nav-link text-white" href="/gallery/">Gallery</a>
+            <a class="nav-item nav-link text-white" href="/feedback/">Feedback</a>
+        </div>
+    </div>
+</nav>
+<br>
+<center>
+    <h2 style="color: #ff192f">
+        <marquee width="60%" direction="left" scrollamount="10">Welocome To Durgasoft</marquee>
+    </h2>
+    <br>
+</center>
+
+{% block content %}
+
+{% endblock %}
+
+
+<!--
+<footer>
+    <h5 id="footerh1">& copyrights by NagaBabu </h5>
+</footer>
+-->
+</body>
+<br><br>
+<footer class="p-3 pagination-lg bg-warning  text-center ">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5>Copyright &copy; 2019 , Naga Babu</h5>
+                <h6>All Rights Reserved</h6>
+                <h6>Developed & Maintained by Naga Babu</h6>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

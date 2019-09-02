@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <title>Feedback form</title>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="card bg-warning">
+                    {% if feedbacks %}
+                        <center><h4>your feedbacks here</h4></center>
+                    {% endif %}
+                    <marquee width="60%" direction="down" scrollamount="3">
+                        {% if feedbacks %}
+                            {% for i in feedbacks %}
+                                {% if i.rating >= 5 and i.rating <= 10 %}
+                                <b style="color: orangered">Name </b>:{{ i.name |capfirst}}<br>
+                                <b>Date</b>:{{ i.date }}<br>
+                                <b>Rating</b>:{{ i.rating }}    <br>
+                                <b>Feedback</b>:{{ i.feedback }}
+                                <hr>
+                                {% endif %}
+                            {% endfor %}
+                            </marquee>
+                        {% else %}
+                            <h4>No Feedbacks are availble</h4>
+                        {% endif %}
+                </div>
+            </div>
+            <br>
+            <div class="col-md-5 ">
+                <div class="card bg-info">
+                    <form method="post">
+                        <h5>Your feedsbacks are</h5>
+                        {% csrf_token %}
+                        {{ fform }}<br>
+                        <center>
+                            <input type="submit" value="send" class="btn btn-success">
+                            <input type="reset" value="clear" class="btn btn-danger">
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
